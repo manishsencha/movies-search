@@ -6,7 +6,7 @@ function App() {
   const [input, setInput] = useState("");
   const [movies, setMovies] = useState([]);
   const getMovies = async (q) => {
-    const url = `http://www.omdbapi.com/?i=tt3896198&apikey=da5c7c5&s=${q}`;
+    const url = `https://www.omdbapi.com/?i=tt3896198&apikey=da5c7c5&s=${q}`;
     await fetch(url).then(async (success) => {
       var res = await success.json();
       if (res.Search) {
